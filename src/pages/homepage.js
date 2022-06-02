@@ -1,10 +1,14 @@
 import './homepage.css';
-import { getSample, getFilms } from '../api';
+import { getSample, getFilms, getPeople, getLocation, getSpecies, getVehicles } from '../api';
 import React, {useEffect, useState} from 'react';
 
 export function Homepage() {
   const [items, setItem] = useState({});
   const [films, setFilms] = useState([]);
+  const [people, setPeople] = useState([]);
+  const [location, setLocation] = useState([]);
+  const [species, setSpecies] = useState([]);
+  const [vehicles, setVehicles] = useState([]);
 
   function clickGet(e){
     e.preventDefault();
@@ -18,6 +22,26 @@ export function Homepage() {
     getFilms().then((events) => {
       if (mounted) {
         setFilms(events);
+      }
+    });
+    getPeople().then((event) =>{
+      if(mounted){
+        setPeople(event);
+      }
+    });
+    getLocation().then((event) =>{
+      if(mounted){
+        setLocation(event);
+      }
+    });
+    getSpecies().then((event) =>{
+      if(mounted){
+        setSpecies(event);
+      }
+    });
+    getVehicles().then((event) =>{
+      if(mounted){
+        setVehicles(event);
       }
     });
     return () => (mounted = false);
@@ -40,11 +64,57 @@ export function Homepage() {
 
       <h3>Get to know more about one of the films from below</h3>
       <div class='grid-container'>
-          {films.map((film) =>(
-            <div class='grid-item'>
-            <p>{film.title}</p>
-            </div>
-          ))}
+        {films.map((film) =>(
+          <div class='grid-item'>
+            <a href={'/Film/'+ film.id} target='_target'>
+              <button>{film.title}</button>
+            </a>
+          </div>
+        ))}
+      </div>
+
+      <h3>Ghibli characters (humans and non humans)</h3>
+      <div class='grid-container'>
+        {people.map((person) =>(
+          <div class='grid-item'>
+            <a href={'/People/'+ person.id} target='_target'>
+              <button>{person.name}</button>
+            </a>
+          </div>
+        ))}
+      </div>
+
+      <h3>Locations ( lands, countries, and places)</h3>
+      <div class='grid-container'>
+        {location.map((location) =>(
+          <div class='grid-item'>
+            <a href={'/Location/'+ location.id} target='_target'>
+              <button>{location.name}</button>
+            </a>
+          </div>
+        ))}
+      </div>
+
+      <h3>Species (humans, animals, and spirits...)</h3>
+      <div class='grid-container'>
+        {species.map((species) =>(
+          <div class='grid-item'>
+            <a href={'/Species/'+ species.id} target='_target'>
+              <button>{species.name}</button>
+            </a>
+          </div>
+        ))}
+      </div>
+
+      <h3>Vehicle</h3>
+      <div class='grid-container'>
+        {vehicles.map((vehicles) =>(
+          <div class='grid-item'>
+            <a href={'/Vehicles/'+ vehicles.id} target='_target'>
+              <button>{vehicles.name}</button>
+            </a>
+          </div>
+        ))}
       </div>
     </div>
   );
