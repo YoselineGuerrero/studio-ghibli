@@ -7,14 +7,10 @@ export default function MoreInfoVehicles() {
   const [vehicles, setVehicles] = useState([]);
 
   useEffect(() =>{
-    let mounted = true;
     getVehiclesID(id).then((event) =>{
-      if(mounted){
-        setVehicles(event)
-      }
+        setVehicles(event);
     });
-    return () => (mounted = false);
-  });
+  }, [id]);
 
   return (
     <div>

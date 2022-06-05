@@ -7,14 +7,10 @@ export default function MoreInfoLocation() {
   const [location, setLocation] = useState([]);
 
   useEffect(() =>{
-    let mounted = true;
     getLocationID(id).then((event) =>{
-      if(mounted){
-        setLocation(event)
-      }
+        setLocation(event);
     });
-    return () => (mounted = false);
-  });
+  }, [id]);
 
   return (
     <div>

@@ -7,14 +7,10 @@ export default function MoreInfoPeople() {
   const [people, setPeople] = useState([]);
 
   useEffect(() =>{
-    let mounted = true;
     getPeopleID(id).then((event) =>{
-      if(mounted){
-        setPeople(event)
-      }
+        setPeople(event);
     });
-    return () => (mounted = false);
-  });
+  },[id]);
 
   return (
     <div>

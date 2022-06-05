@@ -7,14 +7,10 @@ export default function MoreInfoSpecies() {
   const [species, setSpecies] = useState([]);
 
   useEffect(() =>{
-    let mounted = true;
     getSpeciesID(id).then((event) =>{
-      if(mounted){
-        setSpecies(event)
-      }
+        setSpecies(event);
     });
-    return () => (mounted = false);
-  });
+  }, [id]);
 
   return (
     <div>

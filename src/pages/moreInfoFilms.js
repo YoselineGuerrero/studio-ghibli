@@ -7,14 +7,10 @@ export default function MoreInfoFilm() {
   const [film, setFilm] = useState([]);
 
   useEffect(() =>{
-    let mounted = true;
     getFilmsID(id).then((event) =>{
-      if(mounted){
-        setFilm(event)
-      }
+        setFilm(event);
     });
-    return () => (mounted = false);
-  });
+  }, [id]);
 
   return (
     <div>
