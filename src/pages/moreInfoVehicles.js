@@ -14,8 +14,14 @@ export default function MoreInfoVehicles() {
 
   return (
     <div>
-      <p>Title:</p>
+      <p>Name:</p>
       <p>{vehicles.name}</p>
+      <p>Description:</p>
+      <p>{vehicles.description}</p>
+      <p>Vehicle Class:</p>
+      <p>{vehicles.vehicle_class}</p>
+      <p>Length:</p>
+      <p>{vehicles.length}</p>
     </div>
   );
 }

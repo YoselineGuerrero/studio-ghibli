@@ -14,8 +14,14 @@ export default function MoreInfoSpecies() {
 
   return (
     <div>
-      <p>Title:</p>
+      <p>Name:</p>
       <p>{species.name}</p>
+      <p>Classification:</p>
+      <p>{species.classification}</p>
+      <p>Eye Color:</p>
+      <p>{species.eye_colors}</p>
+      <p>Hair Color:</p>
+      <p>{species.hair_colors}</p>
     </div>
   );
 }

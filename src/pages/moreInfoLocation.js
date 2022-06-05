@@ -14,8 +14,14 @@ export default function MoreInfoLocation() {
 
   return (
     <div>
-      <p>Title:</p>
+      <p>Location:</p>
       <p>{location.name}</p>
+      <p>Climate:</p>
+      <p>{location.climate}</p>
+      <p>Terrain:</p>
+      <p>{location.terrain}</p>
+      <p>Surface water:</p>
+      <p>{location.surface_water}</p>
     </div>
   );
 }

@@ -14,8 +14,16 @@ export default function MoreInfoPeople() {
 
   return (
     <div>
-      <p>Title:</p>
+      <p>Name:</p>
       <p>{people.name}</p>
+      <p>Gender:</p>
+      <p>{people.gender}</p>
+      <p>Age:</p>
+      <p>{people.age}</p>
+      <p>Eye Color:</p>
+      <p>{people.eye_color}</p>
+      <p>Hair Color:</p>
+      <p>{people.hair_color}</p>
     </div>
   );
 }
