@@ -1,43 +1,53 @@
 const baseURL = 'https://ghibliapi.herokuapp.com/';
 
-export function getFilms(){
-  return fetch(baseURL+'films').then((res) => res.json());
+export const getFilms = async () => {
+  const res = await fetch(baseURL+'films');
+  return res.json();
 }
 
-export function getFilmsID(id){
-  return fetch(baseURL+'films/'+id).then((res) => res.json());
+export const getFilmsID = async (id) => {
+  const res = await fetch(baseURL+'films/'+id);
+  return res.json();
 }
 
-export function getPeople(){
-  return fetch(baseURL+'people').then((res) => res.json());
+export const getPeople = async () => {
+  const res = await fetch(baseURL+'people');
+  return res.json();
 }
 
-export function getPeopleID(id){
-  return fetch(baseURL+'people/'+id).then((res) => res.json());
+export const getPeopleID = async (id) => {
+  const res = await fetch(baseURL+'people/'+id);
+  return res.json();
 }
 
-export function getLocation(){
-  return fetch(baseURL+'locations').then((res) => res.json());
+export const getLocation = async () => {
+  const res = await fetch(baseURL+'locations');
+  return res.json();
 }
 
-export function getLocationID(id){
-  return fetch(baseURL+'locations/'+id).then((res) => res.json());
+export const getLocationID = async (id) => {
+  const res = await fetch(baseURL+'locations/'+id);
+  return res.json();
 }
 
-export function getSpecies(){
-  return fetch(baseURL+'species').then((res) => res.json());
+export const getSpecies = async () => {
+  const res = await fetch(baseURL+'species');
+  return res.json();
 }
 
-export function getSpeciesID(id){
-  return fetch(baseURL+'species/'+id).then((res) => res.json());
+export const getSpeciesID = async (id) => {
+  const res = await fetch(baseURL+'species/'+id);
+  return res.json();
 }
 
-export function getVehicles(){
-  return fetch(baseURL+'vehicles').then((res) => res.json());
+export const getVehicles = async () => {
+  const res = await fetch(baseURL+'vehicles');
+  return res.json();
 }
 
-export function getVehiclesID(id){
-  return fetch(baseURL+'vehicles/'+id).then((res) => res.json());
+export const getVehiclesID = async (id) => {
+  const res = await fetch(baseURL+'vehicles/'+id);
+  return res.json();
 }
 
 export const getExtra = async (url) => {
