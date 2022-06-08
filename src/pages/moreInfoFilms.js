@@ -1,19 +1,36 @@
-import { getFilmsID } from '../api';
+import { getFilmsID, getExtra } from '../api';
 import React, {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom'
 
 export default function MoreInfoFilm() {
   const { id } = useParams();
   const [film, setFilm] = useState([]);
+  const [people, setPeople] = useState([{'id':1, 'name': 'No characteres can be named currently'}]);
+  const [location, setLocation] = useState([]);
+  const [species, setSpecies] = useState([]);
+  const [vehicles, setVehicles] = useState([]);
 
   useEffect(() =>{
     getFilmsID(id).then((event) =>{
-        setFilm(event);
-    });
+      setFilm(event);
+      let changedData = [];
+      if(event.people[0] !== 'https://ghibliapi.herokuapp.com/people/'){
+        Promise.all(event.people.map((person) => {
+          return getExtra(person).then((data) => {
+            changedData.push(data);
+          });
+        })).then(() => {
+          setPeople(changedData);
+        });
+      }
+    })
   }, [id]);
 
   return (
     <div>
+       {people.map((person) =>(
+        <p key={person.id}>{person.name}</p>
+      ))} 
       <p>Title:</p>
       <p>{film.title}</p>
       <p>Original Title:</p>

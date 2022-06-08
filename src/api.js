@@ -39,3 +39,8 @@ export function getVehicles(){
 export function getVehiclesID(id){
   return fetch(baseURL+'vehicles/'+id).then((res) => res.json());
 }
+
+export const getExtra = async (url) => {
+  const res = await fetch(url);
+  return res.json();
+}
