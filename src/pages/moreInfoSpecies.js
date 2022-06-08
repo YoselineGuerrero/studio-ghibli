@@ -14,6 +14,9 @@ export default function MoreInfoSpecies() {
 
   return (
     <div>
+      <a href='/'>
+        <button>Back</button>
+      </a>
       <p>Name:</p>
       <p>{species.name}</p>
       <p>Classification:</p>

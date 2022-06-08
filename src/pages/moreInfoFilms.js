@@ -28,6 +28,9 @@ export default function MoreInfoFilm() {
 
   return (
     <div>
+      <a href='/'>
+        <button>Back</button>
+      </a>
        {people.map((person) =>(
         <p key={person.id}>{person.name}</p>
       ))} 

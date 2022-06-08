@@ -14,6 +14,9 @@ export default function MoreInfoPeople() {
 
   return (
     <div>
+      <a href='/'>
+        <button>Back</button>
+      </a>
       <p>Name:</p>
       <p>{people.name}</p>
       <p>Gender:</p>

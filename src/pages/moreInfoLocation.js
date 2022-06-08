@@ -14,6 +14,9 @@ export default function MoreInfoLocation() {
 
   return (
     <div>
+      <a href='/'>
+        <button>Back</button>
+      </a>
       <p>Location:</p>
       <p>{location.name}</p>
       <p>Climate:</p>

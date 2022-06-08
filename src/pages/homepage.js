@@ -33,7 +33,7 @@ export function Homepage() {
       <div className='grid-container'>
         {films.map((film) =>(
           <div className='grid-item'>
-            <a href={'/Film/'+ film.id} target='_target'>
+            <a href={'/Film/'+ film.id}>
               <button>{film.title}</button>
             </a>
           </div>
@@ -44,7 +44,7 @@ export function Homepage() {
       <div className='grid-container'>
         {people.map((person) =>(
           <div className='grid-item'>
-            <a href={'/People/'+ person.id} target='_target'>
+            <a href={'/People/'+ person.id}>
               <button>{person.name}</button>
             </a>
           </div>
@@ -55,7 +55,7 @@ export function Homepage() {
       <div className='grid-container'>
         {location.map((location) =>(
           <div className='grid-item'>
-            <a href={'/Location/'+ location.id} target='_target'>
+            <a href={'/Location/'+ location.id}>
               <button>{location.name}</button>
             </a>
           </div>
@@ -66,7 +66,7 @@ export function Homepage() {
       <div className='grid-container'>
         {species.map((species) =>(
           <div className='grid-item'>
-            <a href={'/Species/'+ species.id} target='_target'>
+            <a href={'/Species/'+ species.id}>
               <button>{species.name}</button>
             </a>
           </div>
@@ -77,7 +77,7 @@ export function Homepage() {
       <div className='grid-container'>
         {vehicles.map((vehicles) =>(
           <div className='grid-item'>
-            <a href={'/Vehicles/'+ vehicles.id} target='_target'>
+            <a href={'/Vehicles/'+ vehicles.id}>
               <button>{vehicles.name}</button>
             </a>
           </div>

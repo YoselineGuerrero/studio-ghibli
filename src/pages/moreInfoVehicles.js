@@ -14,6 +14,9 @@ export default function MoreInfoVehicles() {
 
   return (
     <div>
+      <a href='/'>
+        <button>Back</button>
+      </a>
       <p>Name:</p>
       <p>{vehicles.name}</p>
       <p>Description:</p>
