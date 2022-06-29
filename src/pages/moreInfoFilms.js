@@ -56,24 +56,12 @@ export default function MoreInfoFilm() {
     })
   }, [id]);
 
-  console.log(vehicles)
   return (
     <div>
       <a href='/'>
         <button>Back</button>
       </a>
-       {people.map((person) =>(
-        <p key={person.id}>{person.name}</p>
-      ))}
-      {location.map((location) =>(
-        <p key={location.id}>{location.name}</p>
-      ))} 
-      {species.map((specie) =>(
-        <p key={specie.id}>{specie.name}</p>
-      ))} 
-      {vehicles.map((vehicle) =>(
-        <p key={vehicle.id}>{vehicle.name}</p>
-      ))}  
+      <img src={film.movie_banner} width="25%" height="25%" alt={film.title}></img>
       <p>Title:</p>
       <p>{film.title}</p>
       <p>Original Title:</p>
@@ -92,8 +80,35 @@ export default function MoreInfoFilm() {
       <p>{film.running_time}</p>
       <p>Rotten Tomatoes Score:</p>
       <p>{film.rt_score}</p>
-      <p>Image:</p>
-      <img src={film.movie_banner} width="25%" height="25%" alt={film.title}></img>
+
+      <h4>People in the film:</h4>
+      {people.map((person) =>(
+        <>
+          <span key={person.id}>{person.name}</span>
+          <span style={person.id !== 1? {} :{ display: 'none' }} >, </span>
+        </>
+      ))}
+      <h4>Locations in the film:</h4>
+      {location.map((location) =>(
+        <>
+          <span key={location.id}>{location.name}</span>
+          <span style={location.id !== 1? {} :{ display: 'none' }} >, </span>
+        </>
+      ))}
+      <h4>Species in the film:</h4>
+      {species.map((specie) =>(
+        <>
+          <span key={specie.id}>{specie.name}</span>
+          <span style={specie.id !== 1? {} :{ display: 'none' }}>, </span>
+        </>
+      ))}
+      <h4>Vehicles in the film:</h4>
+      {vehicles.map((vehicle) =>(
+        <>
+          <span key={vehicle.id}>{vehicle.name}</span>
+          <span style={vehicle.id !== 1? {} :{ display: 'none' }}>, </span>
+        </>
+      ))}
     </div>
   );
 }
