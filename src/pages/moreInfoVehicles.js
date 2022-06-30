@@ -41,12 +41,16 @@ export default function MoreInfoVehicles() {
       <p>{vehicles.length}</p>
 
       <h4>Driver of vehicle:</h4>
-        <span key={people.id}>{people.name}</span>
+        <a key={people.id} href={'/People/'+ people.id} style={people.id !== 1? {} :{ display: 'none' }}>
+            <button>{people.name}</button>
+          </a>
       <h4>They appeared in these films:</h4>
       {films.map((film) =>(
         <>
-        <span key={film.id}>{film.title}</span>
-        <span style={film.id !== 1? {} :{ display: 'none' }}>, </span>
+          <a key={film.id} href={'/Film/'+ film.id} style={film.id !== 1? {} :{ display: 'none' }}>
+            <button>{film.title}</button>
+          </a>
+          <span style={film.id !== 1? {display: 'none'} :{}}>{film.name}</span>
         </>
       ))}
     </div>

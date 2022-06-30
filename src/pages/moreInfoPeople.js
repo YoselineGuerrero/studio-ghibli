@@ -12,7 +12,6 @@ export default function MoreInfoPeople() {
     getPeopleID(id).then((event) =>{
       setPeople(event);
       let changedData1 = [];
-      let changedData2 = [];
       if(event.films[0] !== 'https://ghibliapi.herokuapp.com/films/'){
         Promise.all(event.films.map((film) => {
           return getExtra(film).then((data) => {
@@ -22,18 +21,12 @@ export default function MoreInfoPeople() {
           setFilms(changedData1);
         });
       }
-      if(event.species[0] !== 'https://ghibliapi.herokuapp.com/species/'){
-        Promise.all(event.species.map((specie) => {
-          return getExtra(specie).then((data) => {
-            changedData2.push(data);
-          });
-        })).then(() => {
-          setSpecies(changedData2);
-        });
-      }
+      getExtra(event.species).then((event) =>{
+        setSpecies(event);})
     });
   },[id]);
 
+  
   return (
     <div>
       <a href='/'>
@@ -54,17 +47,16 @@ export default function MoreInfoPeople() {
       <h4>They appeared in these films:</h4>
       {films.map((film) =>(
         <>
-          <span key={film.id}>{film.title}</span>
-          <span style={film.id !== 1? {} :{ display: 'none' }}>, </span>
+          <a key={film.id} href={'/Film/'+ film.id} style={film.id !== 1? {} :{ display: 'none' }}>
+            <button>{film.title}</button>
+          </a>
+          <span style={film.id !== 1? {display: 'none'} :{}}>{film.name}</span>
         </>
       ))}
       <h4>They are:</h4>
-      {species.map((specie) =>(
-        <>
-          <span key={specie.id}>{specie.name}</span>
-          <span style={specie.id !== 1? {} :{ display: 'none' }}>, </span>
-        </>
-      ))}
+        <a key={species.id} href={'/Species/'+ species.id} style={species.id !== 1? {} :{ display: 'none' }}>
+          <button>{species.name}</button>
+        </a>
     </div>
   );
 }

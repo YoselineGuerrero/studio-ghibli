@@ -84,29 +84,37 @@ export default function MoreInfoFilm() {
       <h4>People in the film:</h4>
       {people.map((person) =>(
         <>
-          <span key={person.id}>{person.name}</span>
-          <span style={person.id !== 1? {} :{ display: 'none' }} >, </span>
+          <a key={person.id} href={'/People/'+ person.id} style={person.id !== 1? {} :{ display: 'none' }}>
+            <button>{person.name}</button>
+          </a>
+          <span style={person.id !== 1? {display: 'none'} :{}}>{person.name}</span>
         </>
       ))}
       <h4>Locations in the film:</h4>
       {location.map((location) =>(
         <>
-          <span key={location.id}>{location.name}</span>
-          <span style={location.id !== 1? {} :{ display: 'none' }} >, </span>
+          <a key={location.id} href={'/Location/'+ location.id} style={location.id !== 1? {} :{ display: 'none' }}>
+            <button>{location.name}</button>
+          </a>
+          <span style={location.id !== 1? {display: 'none'} :{}}>{location.name}</span>
         </>
       ))}
       <h4>Species in the film:</h4>
       {species.map((specie) =>(
         <>
-          <span key={specie.id}>{specie.name}</span>
-          <span style={specie.id !== 1? {} :{ display: 'none' }}>, </span>
+          <a key={specie.id} href={'/Species/'+ specie.id} style={specie.id !== 1? {} :{ display: 'none' }}>
+            <button>{specie.name}</button>
+          </a>
+          <span style={specie.id !== 1? {display: 'none'} :{}}>{specie.name}</span>
         </>
       ))}
       <h4>Vehicles in the film:</h4>
       {vehicles.map((vehicle) =>(
         <>
-          <span key={vehicle.id}>{vehicle.name}</span>
-          <span style={vehicle.id !== 1? {} :{ display: 'none' }}>, </span>
+          <a key={vehicle.id} href={'/Vehicles/'+ vehicle.id} style={vehicle.id !== 1? {} :{ display: 'none' }}>
+            <button>{vehicle.name}</button>
+          </a>
+          <span style={vehicle.id !== 1? {display: 'none'} :{}}>{vehicle.name}</span>
         </>
       ))}
     </div>

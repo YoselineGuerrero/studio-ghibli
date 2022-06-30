@@ -51,15 +51,19 @@ export default function MoreInfoSpecies() {
       <h4>They appeared in these films:</h4>
       {films.map((film) =>(
         <>
-          <span key={film.id}>{film.title}</span>
-          <span style={film.id !== 1? {} :{ display: 'none' }}>, </span>
+          <a key={film.id} href={'/Film/'+ film.id} style={film.id !== 1? {} :{ display: 'none' }}>
+            <button>{film.title}</button>
+          </a>
+          <span style={film.id !== 1? {display: 'none'} :{}}>{film.name}</span>
         </>
       ))}
       <h4>People in the film:</h4>
       {people.map((person) =>(
         <>
-          <span key={person.id}>{person.name}</span>
-          <span style={person.id !== 1? {} :{ display: 'none' }} >, </span>
+          <a key={person.id} href={'/People/'+ person.id} style={person.id !== 1? {} :{ display: 'none' }}>
+            <button>{person.name}</button>
+          </a>
+          <span style={person.id !== 1? {display: 'none'} :{}}>{person.name}</span>
         </>
       ))}
     </div>
