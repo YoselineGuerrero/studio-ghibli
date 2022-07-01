@@ -1,6 +1,7 @@
 import { getVehiclesID, getExtra } from '../api';
 import React, {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom'
+import EndButtonRedirect from '../components/endButtons';
 
 export default function MoreInfoVehicles() {
   const { id } = useParams();
@@ -45,14 +46,7 @@ export default function MoreInfoVehicles() {
             <button>{people.name}</button>
           </a>
       <h4>They appeared in these films:</h4>
-      {films.map((film) =>(
-        <>
-          <a key={film.id} href={'/Film/'+ film.id} style={film.id !== 1? {} :{ display: 'none' }}>
-            <button>{film.title}</button>
-          </a>
-          <span style={film.id !== 1? {display: 'none'} :{}}>{film.name}</span>
-        </>
-      ))}
+      <EndButtonRedirect films={films}/>
     </div>
   );
 }
