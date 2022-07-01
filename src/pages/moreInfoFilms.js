@@ -1,6 +1,7 @@
 import { getFilmsID, getExtra } from '../api';
 import React, {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom'
+import EndButtonRedirect from '../components/endButtons';
 
 export default function MoreInfoFilm() {
   const { id } = useParams();
@@ -82,41 +83,16 @@ export default function MoreInfoFilm() {
       <p>{film.rt_score}</p>
 
       <h4>People in the film:</h4>
-      {people.map((person) =>(
-        <>
-          <a key={person.id} href={'/People/'+ person.id} style={person.id !== 1? {} :{ display: 'none' }}>
-            <button>{person.name}</button>
-          </a>
-          <span style={person.id !== 1? {display: 'none'} :{}}>{person.name}</span>
-        </>
-      ))}
+      <EndButtonRedirect people={people}/>
+
       <h4>Locations in the film:</h4>
-      {location.map((location) =>(
-        <>
-          <a key={location.id} href={'/Location/'+ location.id} style={location.id !== 1? {} :{ display: 'none' }}>
-            <button>{location.name}</button>
-          </a>
-          <span style={location.id !== 1? {display: 'none'} :{}}>{location.name}</span>
-        </>
-      ))}
+      <EndButtonRedirect location={location}/>
+
       <h4>Species in the film:</h4>
-      {species.map((specie) =>(
-        <>
-          <a key={specie.id} href={'/Species/'+ specie.id} style={specie.id !== 1? {} :{ display: 'none' }}>
-            <button>{specie.name}</button>
-          </a>
-          <span style={specie.id !== 1? {display: 'none'} :{}}>{specie.name}</span>
-        </>
-      ))}
+      <EndButtonRedirect species={species}/>
+
       <h4>Vehicles in the film:</h4>
-      {vehicles.map((vehicle) =>(
-        <>
-          <a key={vehicle.id} href={'/Vehicles/'+ vehicle.id} style={vehicle.id !== 1? {} :{ display: 'none' }}>
-            <button>{vehicle.name}</button>
-          </a>
-          <span style={vehicle.id !== 1? {display: 'none'} :{}}>{vehicle.name}</span>
-        </>
-      ))}
+      <EndButtonRedirect vehicles={vehicles}/>
     </div>
   );
 }
