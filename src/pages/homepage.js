@@ -1,5 +1,5 @@
 import './homepage.css';
-import { getFilms, getPeople, getLocation, getSpecies, getVehicles } from '../api';
+import { getFilms, getPeople, getLocation, getSpecies, getVehicles } from '../components/api';
 import React, {useEffect, useState} from 'react';
 import HomeCards from '../components/homeCards';
 

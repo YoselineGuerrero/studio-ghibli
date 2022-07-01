@@ -1,4 +1,4 @@
-import { getVehiclesID, getExtra } from '../api';
+import { getVehiclesID, getExtra } from '../components/api';
 import React, {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom'
 import EndButtonRedirect from '../components/endButtons';
