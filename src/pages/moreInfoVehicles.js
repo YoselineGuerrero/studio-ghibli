@@ -1,3 +1,4 @@
+import './films.css';
 import { getVehiclesID, getExtra } from '../components/api';
 import React, {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom'
@@ -28,25 +29,39 @@ export default function MoreInfoVehicles() {
   }, [id]);
 
   return (
-    <div>
+    <div className='bodyPadding'>
       <a href='/'>
         <button>Back</button>
       </a>
-      <p>Name:</p>
-      <p>{vehicles.name}</p>
-      <p>Description:</p>
-      <p>{vehicles.description}</p>
-      <p>Vehicle Class:</p>
-      <p>{vehicles.vehicle_class}</p>
-      <p>Length:</p>
-      <p>{vehicles.length}</p>
+      <div className='center'>
+        <p>Name:</p>
+        <p>{vehicles.name}</p>
+      </div>
+      <div className='centerLine'>
+        <div className='spacing'>
+          <p>Vehicle Class:</p>
+          <p>{vehicles.vehicle_class}</p>
+        </div>
+        <div className='spacing'>
+          <p>Length:</p>
+          <p>{vehicles.length}</p>
+        </div>
+      </div>
 
-      <h4>Driver of vehicle:</h4>
+      <div className='center'>
+        <p>Description:</p>
+        <p>{vehicles.description}</p>
+      </div>
+      <div className='center'>
+        <h4>Driver of vehicle:</h4>
         <a key={people.id} href={'/People/'+ people.id} style={people.id !== 1? {} :{ display: 'none' }}>
-            <button>{people.name}</button>
-          </a>
-      <h4>They appeared in these films:</h4>
-      <EndButtonRedirect films={films}/>
+          <button>{people.name}</button>
+        </a>
+      </div>
+      <div className='center'>
+        <h4>They appeared in these films:</h4>
+        <EndButtonRedirect films={films}/>
+      </div>
     </div>
   );
 }

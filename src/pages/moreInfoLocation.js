@@ -1,3 +1,4 @@
+import './films.css';
 import { getLocationID, getExtra } from '../components/api';
 import React, {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
@@ -36,23 +37,37 @@ export default function MoreInfoLocation() {
   }, [id]);
 
   return (
-    <div>
+    <div className='bodyPadding'>
       <a href='/'>
         <button>Back</button>
       </a>
-      <p>Location:</p>
-      <p>{location.name}</p>
-      <p>Climate:</p>
-      <p>{location.climate}</p>
-      <p>Terrain:</p>
-      <p>{location.terrain}</p>
-      <p>Surface water:</p>
-      <p>{location.surface_water}</p>
+      <div className='center'>
+        <p>Location:</p>
+        <p>{location.name}</p>
+      </div>
+      <div className='centerLine'>
+        <div className='spacing'>
+          <p>Climate:</p>
+          <p>{location.climate}</p>
+        </div>
+        <div className='spacing'>
+          <p>Terrain:</p>
+          <p>{location.terrain}</p>
+        </div>
+        <div className='spacing'>
+          <p>Surface water:</p>
+          <p>{location.surface_water}</p>
+        </div>
+      </div>
 
-      <h4>They appeared in these films:</h4>
-      <EndButtonRedirect films={films}/>
-      <h4>People in the film:</h4>
-      <EndButtonRedirect people={people}/>
+      <div className='center'>
+        <h4>They appeared in these films:</h4>
+        <EndButtonRedirect films={films}/>
+      </div>
+      <div className='center'>
+        <h4>People in the film:</h4>
+        <EndButtonRedirect people={people}/>
+      </div>
     </div>
   );
 }

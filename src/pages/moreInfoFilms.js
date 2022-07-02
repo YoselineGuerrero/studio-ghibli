@@ -70,8 +70,8 @@ export default function MoreInfoFilm() {
         </div>
         <img src={film.movie_banner} width="25%" height="25%" alt={film.title}></img>
         <div className='spacing'>
-          <span>Rotten Tomatoes Score:</span>
-          <span>{film.rt_score}</span>
+          <p>Rotten Tomatoes Score:</p>
+          <p>{film.rt_score}</p>
         </div>
       </div>
       <div className='sameLine'>

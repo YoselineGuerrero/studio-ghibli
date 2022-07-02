@@ -1,3 +1,4 @@
+import './films.css';
 import { getSpeciesID, getExtra } from '../components/api';
 import React, {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom'
@@ -36,23 +37,37 @@ export default function MoreInfoSpecies() {
   }, [id]);
 
   return (
-    <div>
+    <div className='bodyPadding'>
       <a href='/'>
         <button>Back</button>
       </a>
-      <p>Name:</p>
-      <p>{species.name}</p>
-      <p>Classification:</p>
-      <p>{species.classification}</p>
-      <p>Eye Color:</p>
-      <p>{species.eye_colors}</p>
-      <p>Hair Color:</p>
-      <p>{species.hair_colors}</p>
+      <div className='center'>
+        <p>Name:</p>
+        <p>{species.name}</p>
+      </div>
+      <div className='centerLine'>
+        <div className='spacing'>
+          <p>Classification:</p>
+          <p>{species.classification}</p>
+        </div>
+        <div className='spacing'>
+          <p>Eye Color:</p>
+          <p>{species.eye_colors}</p>
+        </div>
+        <div className='spacing'>
+          <p>Hair Color:</p>
+          <p>{species.hair_colors}</p>
+        </div>
+      </div>
 
-      <h4>They appeared in these films:</h4>
-      <EndButtonRedirect films={films}/>
-      <h4>People in the film:</h4>
-      <EndButtonRedirect people={people}/>
+      <div className='center'>
+        <h4>They appeared in these films:</h4>
+        <EndButtonRedirect films={films}/>
+      </div>
+      <div className='center'>
+        <h4>People in the film:</h4>
+        <EndButtonRedirect people={people}/>
+      </div>
     </div>
   );
 }
