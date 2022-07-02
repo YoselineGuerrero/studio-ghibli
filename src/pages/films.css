@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
 .sameLine {
   justify-content: space-around;
   display: flex;
@@ -22,4 +24,17 @@
 
 .bodyPadding {
   padding: 20px;
+}
+
+p {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+span {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+button {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 500;
 }
