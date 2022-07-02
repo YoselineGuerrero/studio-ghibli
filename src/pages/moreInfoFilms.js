@@ -1,3 +1,4 @@
+import './films.css';
 import { getFilmsID, getExtra } from '../components/api';
 import React, {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom'
@@ -58,41 +59,70 @@ export default function MoreInfoFilm() {
   }, [id]);
 
   return (
-    <div>
+    <div className='bodyPadding'>
       <a href='/'>
         <button>Back</button>
       </a>
-      <img src={film.movie_banner} width="25%" height="25%" alt={film.title}></img>
-      <p>Title:</p>
-      <p>{film.title}</p>
-      <p>Original Title:</p>
-      <p>{film.original_title}</p>
-      <p>Original Title Romanised:</p>
-      <p>{film.original_title_romanised}</p>
-      <p>Description:</p>
-      <p>{film.description}</p>
-      <p>Director:</p>
-      <p>{film.director}</p>
-      <p>Producer:</p>
-      <p>{film.producer}</p>
-      <p>Release date:</p>
-      <p>{film.release_date}</p>
-      <p>Running Time:</p>
-      <p>{film.running_time}</p>
-      <p>Rotten Tomatoes Score:</p>
-      <p>{film.rt_score}</p>
-
-      <h4>People in the film:</h4>
-      <EndButtonRedirect people={people}/>
-
-      <h4>Locations in the film:</h4>
-      <EndButtonRedirect location={location}/>
-
-      <h4>Species in the film:</h4>
-      <EndButtonRedirect species={species}/>
-
-      <h4>Vehicles in the film:</h4>
-      <EndButtonRedirect vehicles={vehicles}/>
+      <div className='centerLine'>
+        <div className='spacing'>
+          <p>Running Time:</p>
+          <p>{film.running_time}</p>
+        </div>
+        <img src={film.movie_banner} width="25%" height="25%" alt={film.title}></img>
+        <div className='spacing'>
+          <span>Rotten Tomatoes Score:</span>
+          <span>{film.rt_score}</span>
+        </div>
+      </div>
+      <div className='sameLine'>
+        <div className='spacing'>
+          <p >Title:</p>
+          <p >{film.title}</p>
+        </div>
+        <div className='spacing'>
+          <p >Original Title:</p>
+          <p >{film.original_title}</p>
+        </div>
+        <div className='spacing'>
+          <p >Original Title Romanised:</p>
+          <p >{film.original_title_romanised}</p>
+        </div>
+      </div>
+      <div className='sameLine'>
+        <div className='spacing'>
+          <p>Director:</p>
+          <p>{film.director}</p>
+        </div>
+        <div className='spacing'>
+          <p>Release date:</p>
+          <p>{film.release_date}</p>
+        </div>
+        <div className='spacing'>
+          <p>Producer:</p>
+          <p>{film.producer}</p>
+        </div>
+      </div>
+      <div className='center'>
+        <p>Description:</p>
+        <p>{film.description}</p>
+      </div>
+      
+      <div className='center'>
+        <h4>People in the film:</h4>
+        <EndButtonRedirect people={people}/>
+      </div>
+      <div className='center'>
+        <h4>Locations in the film:</h4>
+        <EndButtonRedirect location={location}/>
+      </div>
+      <div className='center'>
+        <h4>Species in the film:</h4>
+        <EndButtonRedirect species={species}/>
+      </div>
+      <div className='center'>
+        <h4>Vehicles in the film:</h4>
+        <EndButtonRedirect vehicles={vehicles}/>
+      </div>
     </div>
   );
 }

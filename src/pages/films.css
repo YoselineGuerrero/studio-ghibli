@@ -1,0 +1,25 @@
+.sameLine {
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.spacing {
+  display: inline-flex;
+  align-items: center;
+}
+
+.centerLine {
+  text-align: center;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.center {
+  text-align: center;
+}
+
+.bodyPadding {
+  padding: 20px;
+}
