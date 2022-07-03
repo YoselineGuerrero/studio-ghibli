@@ -21,7 +21,7 @@ const footer_links = [
 
 export default function Footer() {
   return (
-    <nav className='center'>
+    <nav className='center' id='footer'>
       <div className='sameLine'>
         {footer_links.map((link) => (
           <a id='footer-a' key={link.name} href={link.link} target='_blank' rel="noreferrer">{link.name}</a>

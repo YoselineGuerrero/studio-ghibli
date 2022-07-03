@@ -11,7 +11,8 @@ import Navbar from './components/navbar.js';
 
 function App() {
   return (
-    <div>
+    <div id='container'>
+      <div id='body-padding'>
       <Navbar/>
       <BrowserRouter>
         <Routes>
@@ -23,6 +24,7 @@ function App() {
           <Route path="/Vehicles/:id" element={<MoreInfoVehicles/>}/>
         </Routes>
       </BrowserRouter>
+      </div>
       <Footer/>
     </div>
   );
