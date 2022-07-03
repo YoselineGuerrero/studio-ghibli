@@ -26,6 +26,14 @@
   padding: 20px;
 }
 
+#footer-a {
+  Text-Decoration: None !important;
+}
+
+#footer-a:hover{
+  Text-Decoration: underline !important;
+}
+
 p {
   font-family: 'Source Sans Pro', sans-serif;
 }

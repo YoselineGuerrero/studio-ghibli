@@ -6,10 +6,13 @@ import MoreInfoLocation from './pages/moreInfoLocation';
 import MoreInfoPeople from './pages/moreInfoPeople';
 import MoreInfoSpecies from './pages/moreInfoSpecies';
 import MoreInfoVehicles from './pages/moreInfoVehicles';
+import Footer from './components/footer.js';
+import Navbar from './components/navbar.js';
 
 function App() {
   return (
     <div>
+      <Navbar/>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Homepage/>}/>
@@ -20,6 +23,7 @@ function App() {
           <Route path="/Vehicles/:id" element={<MoreInfoVehicles/>}/>
         </Routes>
       </BrowserRouter>
+      <Footer/>
     </div>
   );
 }
