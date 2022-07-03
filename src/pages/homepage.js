@@ -2,6 +2,7 @@ import './homepage.css';
 import { getFilms, getPeople, getLocation, getSpecies, getVehicles } from '../components/api';
 import React, {useEffect, useState} from 'react';
 import HomeCards from '../components/homeCards';
+import HomeFilm from '../components/homeFilm';
 
 export function Homepage() {
   const [films, setFilms] = useState([]);
@@ -30,9 +31,8 @@ export function Homepage() {
 
   return (
     <div>
-      <h3>Get to know more about one of the films from below</h3>
       <div className='grid-container'>
-        <HomeCards films={films}/>
+        <HomeFilm films={films}/>
       </div>
 
       <h3>Ghibli characters (humans and non humans)</h3>
