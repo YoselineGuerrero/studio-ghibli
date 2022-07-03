@@ -31,7 +31,7 @@ export function Homepage() {
 
   return (
     <div>
-      <div className='grid-container'>
+      <div className='grid-container-film'>
         <HomeFilm films={films}/>
       </div>
 

@@ -1,6 +1,12 @@
-.grid-container {
+.grid-container-film {
   display: grid;
   grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
   padding: 10px;
 }
 
@@ -11,4 +17,9 @@
   
 .a-none {
   Text-Decoration: None !important;
+}
+
+.buttons {
+  min-width: -webkit-fill-available;
+  min-height: -webkit-fill-available;
 }
