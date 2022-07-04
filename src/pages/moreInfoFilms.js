@@ -68,7 +68,7 @@ export default function MoreInfoFilm() {
           <p>Running Time:</p>
           <p>{film.running_time}</p>
         </div>
-        <img src={film.movie_banner} width="25%" height="25%" alt={film.title}></img>
+        <img id='film-img' src={film.movie_banner} alt={film.title}></img>
         <div className='spacing'>
           <p>Rotten Tomatoes Score:</p>
           <p>{film.rt_score}</p>

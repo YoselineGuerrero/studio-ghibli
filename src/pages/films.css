@@ -22,6 +22,11 @@
   text-align: center;
 }
 
+#film-img {
+  width: 25%;
+  height: 25%;
+}
+
 .bodyPadding {
   padding: 20px;
 }
@@ -60,4 +65,15 @@ span {
 button {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 500;
+}
+
+@media only screen and (max-width: 600px) {
+  .centerLine {
+    display: grid;
+    justify-items: center;
+  }
+  #film-img {
+    width: 100%;
+    height:fit-content;
+  }
 }

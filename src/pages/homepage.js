@@ -56,7 +56,7 @@ export function Homepage() {
 
   return (
     <div>
-      <div className='centerLine'>
+      <div id='tab-div'>
         {tabs.map((tab) => (
           <span key={tab.id}>
             {tabActive === tab.name

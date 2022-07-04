@@ -39,3 +39,21 @@
   color: burlywood;
   border-bottom: 1px solid burlywood !important;
 }
+
+#tab-div {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media only screen and (max-width: 600px) {
+  .grid-container-film {
+    grid-template-columns: auto;
+  }
+  .grid-container {
+    grid-template-columns: 48vw 48vw;
+  }
+  #tab-div {
+    display: block;
+    text-align: center;
+  }
+}
