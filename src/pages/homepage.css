@@ -22,6 +22,11 @@
 .buttons {
   min-width: -webkit-fill-available;
   min-height: -webkit-fill-available;
+  border-radius: 10px;
+  padding: .5em;
+  border: none;
+  cursor: pointer;
+  font-size: .9em;
 }
 
 #tab-buttons {
