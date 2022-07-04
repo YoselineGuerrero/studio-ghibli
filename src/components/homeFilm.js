@@ -5,11 +5,13 @@ export default function HomeFilm(items) {
   return (
     <>
       {items.films.map((film) =>(
-        <div className='grid-item' key={film.id}>
+        <div className='grid-item-film' key={film.id}>
           <a className='a-none' href={'/Film/'+ film.id}>
-            <img src={film.movie_banner} width="100%" height="75%" alt={film.title}></img>
-            <span>{film.title}</span> <br/>
-            <span>{film.release_date}</span>
+            <img id='home-img' src={film.movie_banner} alt={film.title}></img>
+            <div className='left-title'>
+              <span className='film-card'>{film.title}</span> <br/>
+              <span className='subtitle'>{film.release_date}</span>
+            </div>
           </a>
         </div>
       ))}

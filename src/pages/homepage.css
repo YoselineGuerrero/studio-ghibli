@@ -1,6 +1,6 @@
 .grid-container-film {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto auto;
   padding: 10px;
 }
 
@@ -10,11 +10,40 @@
   padding: 10px;
 }
 
+.grid-item-film {
+  text-align: center;
+  margin: 10px;
+  border: #171c24 solid 1px;
+  border-radius: 10px;
+  padding-bottom: 10px;
+}
+
 .grid-item {
   text-align: center;
   margin: 10px;
 }
-  
+
+#home-img {
+  width:100%;
+  height:75%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.film-card {
+  color: black;
+}
+
+.subtitle { 
+  color: black;
+  font-size: .8em;
+}
+
+.left-title {
+  text-align: left;
+  padding-left: 3px;
+}
+
 .a-none {
   Text-Decoration: None !important;
 }
@@ -33,11 +62,12 @@
   border: none;
   cursor: pointer;
   background-color: inherit;
+  font-size: 1em;
 }
 
 .tab-buttons-active {
-  color: burlywood;
-  border-bottom: 1px solid burlywood !important;
+  color: #bf4747;
+  border-bottom: 1px solid #bf4747 !important;
 }
 
 #tab-div {

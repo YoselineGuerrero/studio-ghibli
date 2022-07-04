@@ -48,6 +48,9 @@
 
 #footer-a {
   Text-Decoration: None !important;
+  color:dimgray;
+  margin: 0 5px;
+  font-size: .8em;
 }
 
 #footer-a:hover{
