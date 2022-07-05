@@ -27,7 +27,7 @@ export default function Footer() {
           <a id='footer-a' key={link.name} href={link.link} target='_blank' rel="noreferrer">{link.name}</a>
         ))}
       </div>
-      <p>Copyright © Yoseline Guerrero 2022</p>
+      <p className='size-copyright'>Copyright © Yoseline Guerrero 2022</p>
     </nav>
   );
 }
