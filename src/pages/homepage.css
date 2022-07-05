@@ -66,6 +66,7 @@
 .film-card {
   color: black;
   margin: 0%;
+  height: 20px;
 }
 
 .subtitle { 
@@ -99,6 +100,8 @@
   padding: .5em;
   border: none;
   cursor: pointer;
+  box-shadow: .5px .5px 2px #4f5e70;
+  background-color:rgba(219, 227, 236, 0.315);
 }
 
 #tab-buttons {
