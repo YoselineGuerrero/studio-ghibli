@@ -1,3 +1,19 @@
+.font-xsmall{
+  font-size: .8em;
+}
+
+.font-small{
+  font-size: .9em;
+}
+
+.font-med{
+  font-size: 1em;
+}
+
+.font-large{
+  font-size: 1.1em;
+}
+
 .grid-container-film {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -50,12 +66,10 @@
 .film-card {
   color: black;
   margin: 0%;
-  font-size: 1em;
 }
 
 .subtitle { 
   color: black;
-  font-size: .8em;
   margin: 0%;
 }
 
@@ -63,7 +77,6 @@
   Text-Decoration: None !important;
   color:dimgray;
   margin: 0 5px;
-  font-size: .8em;
 }
 
 #footer-a:hover{
@@ -86,22 +99,12 @@
   padding: .5em;
   border: none;
   cursor: pointer;
-  font-size: 1em;
-}
-
-.size-title{
-  font-size: 1em;
-}
-
-.size-copyright{
-  font-size: .9em;
 }
 
 #tab-buttons {
   border: none;
   cursor: pointer;
   background-color: inherit;
-  font-size: 1em;
 }
 
 .tab-buttons-active {
@@ -115,20 +118,20 @@
 }
 
 @media only screen and (max-width: 520px) {
-  .film-card {
-    font-size: 1em !important;
-  }
-  .subtitle { 
+  .font-xsmall{
     font-size: .8em !important;
   }
-  #tab-buttons {
-    font-size: 1em;
+  
+  .font-small{
+    font-size: .9em !important;
   }
-  #footer-a {
-    font-size: .8em;
+  
+  .font-med{
+    font-size: 1em !important;
   }
-  .size-copyright{
-    font-size: .9em;
+  
+  .font-large{
+    font-size: 1.1em !important;
   }
 }
 
@@ -139,26 +142,20 @@
   .grid-container {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
-  .film-card {
-    font-size: .8em;
-  }
-  .subtitle { 
+  .font-xsmall{
     font-size: .6em;
   }
-  .size-title{
-    font-size: 1em;
-  }
-  .buttons {
-    font-size: .8em;
-  }
-  #tab-buttons {
-    font-size: .8em;
-  }
-  #footer-a {
-    font-size: .6em;
-  }
-  .size-copyright{
+  
+  .font-small{
     font-size: .7em;
+  }
+  
+  .font-med{
+    font-size: .8em;
+  }
+  
+  .font-large{
+    font-size: .9em;
   }
   #tab-div {
     display: block;
@@ -170,26 +167,20 @@
   .grid-container-film {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
-  .film-card {
-    font-size: .9em;
-  }
-  .subtitle { 
+  .font-xsmall{
     font-size: .7em;
   }
-  .size-title{
-    font-size: 1.1em;
-  }
-  .buttons {
-    font-size: .9em;
-  }
-  #tab-buttons {
-    font-size: .9em;
-  }
-  #footer-a {
-    font-size: .7em;
-  }
-  .size-copyright{
+  
+  .font-small{
     font-size: .8em;
+  }
+  
+  .font-med{
+    font-size: .9em;
+  }
+  
+  .font-large{
+    font-size: 1em;
   }
 }
 
@@ -200,25 +191,19 @@
   .grid-container {
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   }
-  .film-card {
-    font-size: 1.5em;
-  }
-  .subtitle { 
+  .font-xsmall{
     font-size: 1.1em;
   }
-  .size-title{
-    font-size: 1.7em;
-  }
-  .buttons {
-    font-size: 1.5em;
-  }
-  #tab-buttons {
-    font-size: 1.5em;
-  }
-  #footer-a {
-    font-size: 1.1em;
-  }
-  .size-copyright{
+  
+  .font-small{
     font-size: 1.2em;
+  }
+  
+  .font-med{
+    font-size: 1.5em;
+  }
+  
+  .font-large{
+    font-size: 1.7em;
   }
 }

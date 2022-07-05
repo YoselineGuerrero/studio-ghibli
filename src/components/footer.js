@@ -24,10 +24,10 @@ export default function Footer() {
     <nav className='center' id='footer'>
       <div className='sameLine'>
         {footer_links.map((link) => (
-          <a id='footer-a' key={link.name} href={link.link} target='_blank' rel="noreferrer">{link.name}</a>
+          <a id='footer-a' className='font-small' key={link.name} href={link.link} target='_blank' rel="noreferrer">{link.name}</a>
         ))}
       </div>
-      <p className='size-copyright'>Copyright © Yoseline Guerrero 2022</p>
+      <p className='size-copyright font-med'>Copyright © Yoseline Guerrero 2022</p>
     </nav>
   );
 }

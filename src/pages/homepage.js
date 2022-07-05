@@ -60,8 +60,8 @@ export function Homepage() {
         {tabs.map((tab) => (
           <span key={tab.id}>
             {tabActive === tab.name
-              ? <button className='tab-buttons-active' id='tab-buttons' onClick={(e) => tabButton(e, tab.name)}>{tab.name}</button>
-              : <button id='tab-buttons' onClick={(e) => tabButton(e, tab.name)}>{tab.name}</button>
+            ? <button className='tab-buttons-active font-med' id='tab-buttons' onClick={(e) => tabButton(e, tab.name)}>{tab.name}</button>
+              : <button id='tab-buttons' className='font-med' onClick={(e) => tabButton(e, tab.name)}>{tab.name}</button>
             }
           </span>
         ))}

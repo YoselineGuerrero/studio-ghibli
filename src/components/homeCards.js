@@ -27,7 +27,7 @@ export default function HomeCards(items) {
       {givenArray.map((item) =>(
         <div className='grid-item' key={item.id}>
           <a href={linkName+ item.id} style={item.id !== 1? {} :{ display: 'none' }}>
-            <button className='buttons'>{item.name}</button>
+            <button className='buttons font-med'>{item.name}</button>
           </a>
           <span style={item.id !== 1? {display: 'none'} :{}}>{item.name}</span>
         </div>
