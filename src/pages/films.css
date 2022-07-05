@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=News+Cycle&family=Source+Sans+Pro&display=swap');
 .sameLine {
   justify-content: space-around;
   display: flex;
@@ -58,16 +57,19 @@
 }
 
 p {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'News Cycle', sans-serif;
 }
 
 span {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'News Cycle', sans-serif;
+}
+
+a {
+  font-family: 'News Cycle', sans-serif;
 }
 
 button {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 500;
+  font-family: 'News Cycle', sans-serif;
 }
 
 @media only screen and (max-width: 600px) {

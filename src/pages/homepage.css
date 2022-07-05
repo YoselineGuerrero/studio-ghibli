@@ -13,9 +13,10 @@
 .grid-item-film {
   text-align: center;
   margin: 10px;
-  border: #171c24 solid 1px;
-  border-radius: 10px;
-  padding-bottom: 10px;
+  border-radius: 25px;
+  padding: 10px 10px 20px 10px;
+  box-shadow: .5px .5px 5px #4f5e70;
+  background-color:rgba(208, 219, 233, 0.315);
 }
 
 .grid-item {
@@ -26,17 +27,35 @@
 #home-img {
   width:100%;
   height:75%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 20px;
+  box-shadow: .5px .5px 3px #4f5e70;
+}
+
+.tomatoes {
+  position: relative;
+  white-space: nowrap;
+  display: inline;
+}
+
+.cover {
+  background: white;
+  height: 100%;
+  overflow: hidden;
+  mix-blend-mode: color;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .film-card {
   color: black;
+  margin: 0%;
 }
 
 .subtitle { 
   color: black;
-  font-size: .8em;
+  font-size: .75em;
+  margin: 0%;
 }
 
 .left-title {
