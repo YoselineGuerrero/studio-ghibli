@@ -1,6 +1,6 @@
 .grid-container-film {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   padding: 10px;
 }
 
@@ -95,14 +95,17 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .grid-container-film {
-    grid-template-columns: auto;
-  }
   .grid-container {
     grid-template-columns: 48vw 48vw;
   }
   #tab-div {
     display: block;
     text-align: center;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .grid-container-film {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
