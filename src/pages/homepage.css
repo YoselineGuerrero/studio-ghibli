@@ -109,3 +109,9 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
+
+@media only screen and (min-width: 1600px) {
+  .grid-container-film {
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  }
+}
