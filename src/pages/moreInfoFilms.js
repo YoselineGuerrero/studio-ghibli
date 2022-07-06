@@ -63,9 +63,11 @@ export default function MoreInfoFilm() {
       <a href='/'>
         <button>Back</button>
       </a>
-      <div className='centerLine'>
+      <div  style={{display: 'inline-flex', alignItems: 'center'}}>
+      <div className='center-layout'>
         <img id='film-img' src={film.movie_banner} alt={film.title}></img>
       </div>
+      <div>
       <div id='film-titles'>
         <span className='font-xlarge'>{film.title} </span>
         <span style={{margin:'0 10px'}}>· {film.original_title} ·</span>
@@ -81,7 +83,8 @@ export default function MoreInfoFilm() {
         <span style={{margin:'0 5px'}}>{film.running_time} mins</span>
       </div>
       <p>{film.description}</p>
-
+      </div>
+      </div>
       <div className='center'>
         <EndButtonRedirect people={people} />
       </div>

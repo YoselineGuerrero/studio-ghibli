@@ -22,8 +22,13 @@
 }
 
 #film-img {
-  width: 25%;
-  height: 25%;
+  width: 90%;
+  height: 90%;
+}
+
+.center-layout {
+  display: flex;
+  justify-content: center;
 }
 
 #film-titles {
