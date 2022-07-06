@@ -26,6 +26,12 @@
   height: 25%;
 }
 
+#film-titles {
+  justify-content: flex-start;
+  display: flex;
+  align-items: baseline;
+}
+
 .bodyPadding {
   padding: 20px;
 }

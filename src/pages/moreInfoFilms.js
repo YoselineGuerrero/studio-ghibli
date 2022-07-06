@@ -64,63 +64,34 @@ export default function MoreInfoFilm() {
         <button>Back</button>
       </a>
       <div className='centerLine'>
-        <div className='spacing'>
-          <p>Running Time:</p>
-          <p>{film.running_time}</p>
-        </div>
         <img id='film-img' src={film.movie_banner} alt={film.title}></img>
-        <div className='spacing'>
-          <p>Rotten Tomatoes Score:</p>
-          <p>{film.rt_score}</p>
-        </div>
       </div>
-      <div className='sameLine'>
-        <div className='spacing'>
-          <p >Title:</p>
-          <p >{film.title}</p>
-        </div>
-        <div className='spacing'>
-          <p >Original Title:</p>
-          <p >{film.original_title}</p>
-        </div>
-        <div className='spacing'>
-          <p >Original Title Romanised:</p>
-          <p >{film.original_title_romanised}</p>
-        </div>
+      <div id='film-titles'>
+        <span className='font-xlarge'>{film.title} </span>
+        <span style={{margin:'0 10px'}}>· {film.original_title} ·</span>
+        <span>{film.original_title_romanised}</span>
       </div>
-      <div className='sameLine'>
-        <div className='spacing'>
-          <p>Director:</p>
-          <p>{film.director}</p>
-        </div>
-        <div className='spacing'>
-          <p>Release date:</p>
-          <p>{film.release_date}</p>
-        </div>
-        <div className='spacing'>
-          <p>Producer:</p>
-          <p>{film.producer}</p>
-        </div>
+      <div id='film-titles'>
+        <span>Director: {film.director} ·</span>
+        <span style={{margin:'0 5px'}}>Producer: {film.producer}</span>
+      </div>
+      <span>{film.rt_score}/100</span>
+      <div id='film-titles'>
+        <span>{film.release_date} ·</span>
+        <span style={{margin:'0 5px'}}>{film.running_time} mins</span>
+      </div>
+      <p>{film.description}</p>
+
+      <div className='center'>
+        <EndButtonRedirect people={people} />
       </div>
       <div className='center'>
-        <p>Description:</p>
-        <p>{film.description}</p>
-      </div>
-      
-      <div className='center'>
-        <h4>People in the film:</h4>
-        <EndButtonRedirect people={people}/>
+        <EndButtonRedirect location={location} />
       </div>
       <div className='center'>
-        <h4>Locations in the film:</h4>
-        <EndButtonRedirect location={location}/>
+        <EndButtonRedirect species={species} />
       </div>
       <div className='center'>
-        <h4>Species in the film:</h4>
-        <EndButtonRedirect species={species}/>
-      </div>
-      <div className='center'>
-        <h4>Vehicles in the film:</h4>
         <EndButtonRedirect vehicles={vehicles}/>
       </div>
     </div>
