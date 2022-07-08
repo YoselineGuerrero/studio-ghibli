@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=News+Cycle&family=Source+Sans+Pro&display=swap');
+
+#film-grid {
+  display: grid;
+  grid-template-columns: 48vw 48vw;
+}
+
 .sameLine {
   justify-content: space-around;
   display: flex;
@@ -23,7 +29,6 @@
 
 #film-img {
   width: 90%;
-  height: 90%;
 }
 
 .center-layout {
@@ -36,6 +41,7 @@
   justify-content: flex-start;
   display: flex;
   align-items: baseline;
+  flex-wrap: wrap;
 }
 
 .bodyPadding {
@@ -78,8 +84,10 @@ button {
     display: grid;
     justify-items: center;
   }
-  #film-img {
-    width: 100%;
-    height:fit-content;
+}
+
+@media only screen and (max-width: 700px) {
+  #film-grid {
+    grid-template-columns: 98vw;
   }
 }

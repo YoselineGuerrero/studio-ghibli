@@ -63,13 +63,13 @@ export default function MoreInfoFilm() {
       <a href='/'>
         <button>Back</button>
       </a>
-      <div style={{display: 'grid', gridTemplateColumns: '48vw 48vw'}}>
+      <div id='film-grid'>
         <div className='center-layout'>
           <img id='film-img' src={film.movie_banner} alt={film.title}></img>
         </div>
         <div>
           <div id='film-titles'>
-            <span className='font-xlarge'>{film.title} </span>
+           <span className='font-xlarge' id='main-film-title'>{film.title} </span>
             <span style={{margin:'0 10px'}}>· {film.original_title} ·</span>
             <span>{film.original_title_romanised}</span>
           </div>
