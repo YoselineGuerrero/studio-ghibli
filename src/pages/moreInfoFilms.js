@@ -63,27 +63,27 @@ export default function MoreInfoFilm() {
       <a href='/'>
         <button>Back</button>
       </a>
-      <div  style={{display: 'inline-flex', alignItems: 'center'}}>
-      <div className='center-layout'>
-        <img id='film-img' src={film.movie_banner} alt={film.title}></img>
-      </div>
-      <div>
-      <div id='film-titles'>
-        <span className='font-xlarge'>{film.title} </span>
-        <span style={{margin:'0 10px'}}>· {film.original_title} ·</span>
-        <span>{film.original_title_romanised}</span>
-      </div>
-      <div id='film-titles'>
-        <span>Director: {film.director} ·</span>
-        <span style={{margin:'0 5px'}}>Producer: {film.producer}</span>
-      </div>
-      <span>{film.rt_score}/100</span>
-      <div id='film-titles'>
-        <span>{film.release_date} ·</span>
-        <span style={{margin:'0 5px'}}>{film.running_time} mins</span>
-      </div>
-      <p>{film.description}</p>
-      </div>
+      <div style={{display: 'grid', gridTemplateColumns: '48vw 48vw'}}>
+        <div className='center-layout'>
+          <img id='film-img' src={film.movie_banner} alt={film.title}></img>
+        </div>
+        <div>
+          <div id='film-titles'>
+            <span className='font-xlarge'>{film.title} </span>
+            <span style={{margin:'0 10px'}}>· {film.original_title} ·</span>
+            <span>{film.original_title_romanised}</span>
+          </div>
+          <div id='film-titles'>
+            <span>Director: {film.director} ·</span>
+            <span style={{margin:'0 5px'}}>Producer: {film.producer}</span>
+          </div>
+          <span>{film.rt_score}/100</span>
+          <div id='film-titles'>
+            <span>{film.release_date} ·</span>
+            <span style={{margin:'0 5px'}}>{film.running_time} mins</span>
+          </div>
+          <p>{film.description}</p>
+        </div>
       </div>
       <div className='center'>
         <EndButtonRedirect people={people} />
