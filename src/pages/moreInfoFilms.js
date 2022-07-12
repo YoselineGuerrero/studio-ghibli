@@ -70,22 +70,22 @@ export default function MoreInfoFilm() {
         <div>
           <div id='film-titles'>
            <span className='font-xlarge' id='main-film-title'>{film.title} </span>
-            <span style={{margin:'0 10px'}}>· {film.original_title} ·</span>
-            <span>{film.original_title_romanised}</span>
+            <span style={{margin:'0 10px'}} className='font-large'>· {film.original_title} ·</span>
+            <span className='font-large'>{film.original_title_romanised}</span>
           </div>
           <div id='film-titles'>
-            <span>Director: {film.director} ·</span>
-            <span style={{margin:'0 5px'}}>Producer: {film.producer}</span>
+            <span className='font-med'>Director: {film.director} ·</span>
+            <span className='font-med' style={{margin:'0 5px'}}>Producer: {film.producer}</span>
           </div>
           <div id='film-titles'>
-            <span>{film.release_date} ·</span>
-            <span style={{margin:'0 5px'}}>{film.running_time} mins</span>
+            <span className='font-small'>{film.release_date} ·</span>
+            <span className='font-small' style={{margin:'0 5px'}}>{film.running_time} mins</span>
           </div>
           <div className='spacing'>
             <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="18" height='18' viewBox="0 0 375 374.999991" version="1.0"><path fill="#0fab4b" d="M214.648438 118.796875s50.816406-37.167969 39.089843-68.46875c-11.726562-31.300781-45.929687 57.707031-45.929687 57.707031s37.132812-67.488281 0-85.09375c-37.136719-17.605468-10.75 82.160156-10.75 82.160156s-6.84375-59.664062-30.292969-65.53125c-23.453125-5.871093 3.90625 49.882813 26.386719 70.425782 22.472656 20.535156 21.496094 8.800781 21.496094 8.800781"/><path fill="#df2c23" d="M174.894531 353.542969c-69.480469-8.273438-118.792969-39.964844-143.476562-83.453125-21.929688-38.613282-24.449219-86.621094-4.28125-135.859375C70 29.59375 162.171875 63.21875 171.964844 76.484375c26.089844 38.378906 72 23.53125 91.464844 14.90625 5.570312-2.46875 11.84375-2.816406 18.292968-1.878906 16.125 2.289062 33.128906 12.851562 41.457032 20.363281 92.113281 83.335938 13.542968 265.207031-148.285157 243.667969"/><path fill="#d35f5f" d="M330.359375 189.410156S322.71875 134 288.3125 129.941406c-34.398438-4.058594 24.558594 49.34375 2.449219 112.066406 0 0-4.308594 14.257813 10.777343 7.945313 15.085938-6.3125 34.097657-38.945313 28.820313-60.542969"/></svg>
             <span className='font-small'><b> {film.rt_score}%</b></span>
           </div>
-          <p>{film.description}</p>
+          <p className='font-med'>{film.description}</p>
         </div>
       </div>
       <div className='center'>
