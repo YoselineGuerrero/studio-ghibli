@@ -3,6 +3,7 @@ import { getLocationID, getExtra } from '../components/api';
 import React, {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
 import EndButtonRedirect from '../components/endButtons';
+import Navbar from '../components/navbar.js';
 
 export default function MoreInfoLocation() {
   const { id } = useParams();
@@ -37,35 +38,35 @@ export default function MoreInfoLocation() {
   }, [id]);
 
   return (
-    <div className='bodyPadding'>
-      <a href='/'>
-        <button>Back</button>
-      </a>
-      <div className='center'>
-        <p>Location:</p>
-        <p>{location.name}</p>
-      </div>
-      <div className='centerLine'>
-        <div className='spacing'>
-          <p>Climate:</p>
-          <p>{location.climate}</p>
+    <>
+      <Navbar/>
+      <div className='bodyPadding'>
+        <div className='center'>
+          <p>Location:</p>
+          <p>{location.name}</p>
         </div>
-        <div className='spacing'>
-          <p>Terrain:</p>
-          <p>{location.terrain}</p>
+        <div className='centerLine'>
+          <div className='spacing'>
+            <p>Climate:</p>
+            <p>{location.climate}</p>
+          </div>
+          <div className='spacing'>
+            <p>Terrain:</p>
+            <p>{location.terrain}</p>
+          </div>
+          <div className='spacing'>
+            <p>Surface water:</p>
+            <p>{location.surface_water}</p>
+          </div>
         </div>
-        <div className='spacing'>
-          <p>Surface water:</p>
-          <p>{location.surface_water}</p>
-        </div>
-      </div>
 
-      <div className='center'>
-        <EndButtonRedirect films={films}/>
+        <div className='center'>
+          <EndButtonRedirect films={films}/>
+        </div>
+        <div className='center'>
+          <EndButtonRedirect people={people}/>
+        </div>
       </div>
-      <div className='center'>
-        <EndButtonRedirect people={people}/>
-      </div>
-    </div>
+    </>
   );
 }

@@ -3,6 +3,7 @@ import { getSpeciesID, getExtra } from '../components/api';
 import React, {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom'
 import EndButtonRedirect from '../components/endButtons';
+import Navbar from '../components/navbar.js';
 
 export default function MoreInfoSpecies() {
   const { id } = useParams();
@@ -37,35 +38,35 @@ export default function MoreInfoSpecies() {
   }, [id]);
 
   return (
-    <div className='bodyPadding'>
-      <a href='/'>
-        <button>Back</button>
-      </a>
-      <div className='center'>
-        <p>Name:</p>
-        <p>{species.name}</p>
-      </div>
-      <div className='centerLine'>
-        <div className='spacing'>
-          <p>Classification:</p>
-          <p>{species.classification}</p>
+    <>
+      <Navbar/>
+      <div className='bodyPadding'>
+        <div className='center'>
+          <p>Name:</p>
+          <p>{species.name}</p>
         </div>
-        <div className='spacing'>
-          <p>Eye Color:</p>
-          <p>{species.eye_colors}</p>
+        <div className='centerLine'>
+          <div className='spacing'>
+            <p>Classification:</p>
+            <p>{species.classification}</p>
+          </div>
+          <div className='spacing'>
+            <p>Eye Color:</p>
+            <p>{species.eye_colors}</p>
+          </div>
+          <div className='spacing'>
+            <p>Hair Color:</p>
+            <p>{species.hair_colors}</p>
+          </div>
         </div>
-        <div className='spacing'>
-          <p>Hair Color:</p>
-          <p>{species.hair_colors}</p>
-        </div>
-      </div>
 
-      <div className='center'>
-        <EndButtonRedirect films={films}/>
+        <div className='center'>
+          <EndButtonRedirect films={films}/>
+        </div>
+        <div className='center'>
+          <EndButtonRedirect people={people}/>
+        </div>
       </div>
-      <div className='center'>
-        <EndButtonRedirect people={people}/>
-      </div>
-    </div>
+    </>
   );
 }

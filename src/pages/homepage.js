@@ -3,6 +3,7 @@ import { getFilms, getPeople, getLocation, getSpecies, getVehicles } from '../co
 import React, {useEffect, useState} from 'react';
 import HomeCards from '../components/homeCards';
 import HomeFilm from '../components/homeFilm';
+import Navbar from '../components/navbar.js';
 
 const tabs =[
   {
@@ -56,6 +57,7 @@ export function Homepage() {
 
   return (
     <div>
+      <Navbar back='false'/>
       <div id='tab-div'>
         {tabs.map((tab) => (
           <span key={tab.id}>

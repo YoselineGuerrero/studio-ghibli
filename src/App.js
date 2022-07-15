@@ -7,23 +7,21 @@ import MoreInfoPeople from './pages/moreInfoPeople';
 import MoreInfoSpecies from './pages/moreInfoSpecies';
 import MoreInfoVehicles from './pages/moreInfoVehicles';
 import Footer from './components/footer.js';
-import Navbar from './components/navbar.js';
 
 function App() {
   return (
     <div id='container'>
       <div id='body-padding'>
-      <Navbar/>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Homepage/>}/>
-          <Route path="/Film/:id" element={<MoreInfoFilm/>}/>
-          <Route path="/Location/:id" element={<MoreInfoLocation/>}/>
-          <Route path="/People/:id" element={<MoreInfoPeople/>}/>
-          <Route path="/Species/:id" element={<MoreInfoSpecies/>}/>
-          <Route path="/Vehicles/:id" element={<MoreInfoVehicles/>}/>
-        </Routes>
-      </BrowserRouter>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Homepage/>}/>
+            <Route path="/Film/:id" element={<MoreInfoFilm/>}/>
+            <Route path="/Location/:id" element={<MoreInfoLocation/>}/>
+            <Route path="/People/:id" element={<MoreInfoPeople/>}/>
+            <Route path="/Species/:id" element={<MoreInfoSpecies/>}/>
+            <Route path="/Vehicles/:id" element={<MoreInfoVehicles/>}/>
+          </Routes>
+        </BrowserRouter>
       </div>
       <Footer/>
     </div>

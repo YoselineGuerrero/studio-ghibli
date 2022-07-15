@@ -3,6 +3,7 @@ import { getPeopleID, getExtra } from '../components/api';
 import React, {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
 import EndButtonRedirect from '../components/endButtons';
+import Navbar from '../components/navbar.js';
 
 export default function MoreInfoPeople() {
   const { id } = useParams();
@@ -30,42 +31,42 @@ export default function MoreInfoPeople() {
 
   
   return (
-    <div className='bodyPadding'>
-      <a href='/'>
-        <button>Back</button>
-      </a>
-      <div className='center'>
-        <p>Name:</p>
-        <p>{people.name}</p>
-      </div>
-      <div className='centerLine'>
-        <div className='spacing'>
-          <p>Gender:</p>
-          <p>{people.gender}</p>
+    <>
+      <Navbar/>
+      <div className='bodyPadding'>
+        <div className='center'>
+          <p>Name:</p>
+          <p>{people.name}</p>
         </div>
-        <div className='spacing'>
-          <p>Age:</p>
-          <p>{people.age}</p>
+        <div className='centerLine'>
+          <div className='spacing'>
+            <p>Gender:</p>
+            <p>{people.gender}</p>
+          </div>
+          <div className='spacing'>
+            <p>Age:</p>
+            <p>{people.age}</p>
+          </div>
+          <div className='spacing'>
+            <p>Eye Color:</p>
+            <p>{people.eye_color}</p>
+          </div>
+          <div className='spacing'>
+            <p>Hair Color:</p>
+            <p>{people.hair_color}</p>
+          </div>
         </div>
-        <div className='spacing'>
-          <p>Eye Color:</p>
-          <p>{people.eye_color}</p>
-        </div>
-        <div className='spacing'>
-          <p>Hair Color:</p>
-          <p>{people.hair_color}</p>
-        </div>
-      </div>
 
-      <div className='center'>
-        <EndButtonRedirect films={films}/>
+        <div className='center'>
+          <EndButtonRedirect films={films}/>
+        </div>
+        <div className='center'>
+          <h4>They are:</h4>
+          <a key={species.id} href={'/Species/'+ species.id} style={species.id !== 1? {} :{ display: 'none' }}>
+            <button>{species.name}</button>
+          </a>
+        </div>
       </div>
-      <div className='center'>
-        <h4>They are:</h4>
-        <a key={species.id} href={'/Species/'+ species.id} style={species.id !== 1? {} :{ display: 'none' }}>
-          <button>{species.name}</button>
-        </a>
-      </div>
-    </div>
+    </>
   );
 }
