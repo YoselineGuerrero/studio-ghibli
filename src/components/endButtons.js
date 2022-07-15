@@ -9,35 +9,34 @@ export default function EndButtonRedirect(items) {
   if(items.people !== undefined){
     linkName = '/People/';
     givenArray = items.people;
-    titleName = 'People in the Film:';
+    titleName = 'people';
   }
   if(items.location !== undefined){
     linkName = '/Location/';
     givenArray = items.location;
-    titleName='Locations in the Film:';
+    titleName='locations';
   }  
   if(items.species !== undefined){
     linkName = '/Species/';
     givenArray = items.species;
-    titleName='Species in the Film';
+    titleName='species';
   }
   if(items.vehicles !== undefined){
     linkName = '/Vehicles/';
     givenArray = items.vehicles;
-    titleName = 'Vehicles in the Film';
+    titleName = 'vehicles';
   }
   if(items.films !== undefined){
     linkName = '/Film/';
     givenArray = items.films;
     filmBool = true;
-    titleName = 'They appeared in these films:';
+    titleName = 'films';
   }
 
   return (
     <div>
-      {givenArray[0].id !==1 &&
+      {givenArray[0].id !==1 ?
         <>
-          <h4>{titleName}</h4>
           {givenArray.map((item) =>(
             <span key={item.id}>
               <a href={linkName+ item.id}>
@@ -48,6 +47,9 @@ export default function EndButtonRedirect(items) {
               </a>
             </span>
           ))}
+        </> 
+        : <>
+        <span>Currently there isn't any {titleName} to be shown.</span>
         </>
       }
     </div>

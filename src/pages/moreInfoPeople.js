@@ -64,6 +64,7 @@ export default function MoreInfoPeople() {
         </div>
 
         <div className='center'>
+        <h4>Films they are in:</h4>
           <EndButtonRedirect films={films}/>
         </div>
       </div>
