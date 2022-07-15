@@ -5,6 +5,22 @@ import { useParams } from 'react-router-dom'
 import EndButtonRedirect from '../components/endButtons';
 import Navbar from '../components/navbar.js';
 
+const tabs =[
+  {
+    id: '1',
+    name: 'People',
+  }, {
+    id: '2',
+    name: 'Locations',
+  }, {
+    id: '3',
+    name: 'Species',
+  }, {
+    id: '4',
+    name: 'Vehicle',
+  }
+]
+
 export default function MoreInfoFilm() {
   const { id } = useParams();
   const [film, setFilm] = useState([]);
@@ -12,6 +28,12 @@ export default function MoreInfoFilm() {
   const [location, setLocation] = useState([{'id':1, 'name': 'No locations can be named currently'}]);
   const [species, setSpecies] = useState([{'id':1, 'name': 'No species can be named currently'}]);
   const [vehicles, setVehicles] = useState([{'id':1, 'name': 'No vehicles can be named currently'}]);
+  const [tabActive, setTabActive] = useState('People');
+
+  function tabButton(event, name) {
+    event.preventDefault();
+    setTabActive(name);
+  }
 
   useEffect(() =>{
     getFilmsID(id).then((event) =>{
@@ -88,16 +110,28 @@ export default function MoreInfoFilm() {
             <p className='font-med'>{film.description}</p>
           </div>
         </div>
-        <div className='center'>
-          <EndButtonRedirect people={people} />
+
+        <div id='tab-div'>
+          {tabs.map((tab) => (
+            <span key={tab.id}>
+              {tabActive === tab.name
+              ? <button className='tab-buttons-active font-med' id='tab-buttons' onClick={(e) => tabButton(e, tab.name)}>{tab.name}</button>
+              : <button id='tab-buttons' className='font-med' onClick={(e) => tabButton(e, tab.name)}>{tab.name}</button>
+              }
+            </span>
+          ))}
         </div>
-        <div className='center'>
-          <EndButtonRedirect location={location} />
+
+        <div className='center' style={tabActive === 'People' ? {} : {display: 'none'}}>
+          <EndButtonRedirect people={people}/>
         </div>
-        <div className='center'>
+        <div className='center' style={tabActive === 'Locations' ? {} : {display: 'none'}}>
+          <EndButtonRedirect location={location}/>
+        </div>
+        <div className='center' style={tabActive === 'Species' ? {} : {display: 'none'}}>
           <EndButtonRedirect species={species} />
         </div>
-        <div className='center'>
+        <div className='center' style={tabActive === 'Vehicle' ? {} : {display: 'none'}}>
           <EndButtonRedirect vehicles={vehicles}/>
         </div>
       </div>

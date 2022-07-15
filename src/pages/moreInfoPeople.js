@@ -56,15 +56,15 @@ export default function MoreInfoPeople() {
             <p>{people.hair_color}</p>
           </div>
         </div>
-
-        <div className='center'>
-          <EndButtonRedirect films={films}/>
-        </div>
         <div className='center'>
           <h4>They are:</h4>
           <a key={species.id} href={'/Species/'+ species.id} style={species.id !== 1? {} :{ display: 'none' }}>
             <button>{species.name}</button>
           </a>
+        </div>
+
+        <div className='center'>
+          <EndButtonRedirect films={films}/>
         </div>
       </div>
     </>

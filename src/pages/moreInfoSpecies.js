@@ -5,12 +5,27 @@ import { useParams } from 'react-router-dom'
 import EndButtonRedirect from '../components/endButtons';
 import Navbar from '../components/navbar.js';
 
+const tabs =[
+  {
+    id: '1',
+    name: 'Films',
+  }, {
+    id: '2',
+    name: 'People',
+  }
+]
+
 export default function MoreInfoSpecies() {
   const { id } = useParams();
   const [species, setSpecies] = useState([]);
   const [people, setPeople] = useState([{'id':1, 'name': 'No residents can be named currently'}]);
   const [films, setFilms] = useState([{'id':1, 'name': 'No films can be named currently'}]);
+  const [tabActive, setTabActive] = useState('Films');
 
+  function tabButton(event, name) {
+    event.preventDefault();
+    setTabActive(name);
+  }
   useEffect(() =>{
     getSpeciesID(id).then((event) =>{
       setSpecies(event);
@@ -60,10 +75,21 @@ export default function MoreInfoSpecies() {
           </div>
         </div>
 
-        <div className='center'>
+        <div id='tab-div'>
+          {tabs.map((tab) => (
+            <span key={tab.id}>
+              {tabActive === tab.name
+              ? <button className='tab-buttons-active font-med' id='tab-buttons' onClick={(e) => tabButton(e, tab.name)}>{tab.name}</button>
+              : <button id='tab-buttons' className='font-med' onClick={(e) => tabButton(e, tab.name)}>{tab.name}</button>
+              }
+            </span>
+          ))}
+        </div>
+
+        <div className='center' style={tabActive === 'Films' ? {} : {display: 'none'}}>
           <EndButtonRedirect films={films}/>
         </div>
-        <div className='center'>
+        <div className='center' style={tabActive === 'People' ? {} : {display: 'none'}}>
           <EndButtonRedirect people={people}/>
         </div>
       </div>
