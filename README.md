@@ -1,6 +1,8 @@
 # Studio Ghibli Site
 
-Want to find more info about Studio Ghibli films? This sites helps you to search for people, places, and things found in the worlds of Ghibli.
+Want to find more info about Studio Ghibli films? This sites helps you search for people, places, and things found in the worlds of Ghibli.
+
+Demo: https://studio-ghibli-collections.netlify.app
 
 This site was created by using React and CSS. 
 
