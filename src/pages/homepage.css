@@ -30,6 +30,12 @@
   padding: 10px;
 }
 
+.center-error{
+  display: flex;
+  justify-content: center;
+  Text-Decoration: None !important;
+ }
+
 .grid-item-film {
   text-align: center;
   margin: 10px;
@@ -106,6 +112,16 @@
   cursor: pointer;
   box-shadow: .5px .5px 2px #4f5e70;
   background-color:rgba(219, 227, 236, 0.315);
+}
+
+.error-button {
+  border-radius: 10px;
+  padding: .5em;
+  border: none;
+  cursor: pointer;
+  box-shadow: .5px .5px 2px #4f5e70;
+  background-color:rgba(219, 227, 236, 0.315);
+
 }
 
 #tab-buttons {

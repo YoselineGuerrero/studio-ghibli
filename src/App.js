@@ -7,6 +7,7 @@ import MoreInfoPeople from './pages/moreInfoPeople';
 import MoreInfoSpecies from './pages/moreInfoSpecies';
 import MoreInfoVehicles from './pages/moreInfoVehicles';
 import Footer from './components/footer.js';
+import ErrorPage from './pages/errorpage.js';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/People/:id" element={<MoreInfoPeople/>}/>
             <Route path="/Species/:id" element={<MoreInfoSpecies/>}/>
             <Route path="/Vehicles/:id" element={<MoreInfoVehicles/>}/>
+            <Route path="*" element={<ErrorPage/>}/>
           </Routes>
         </BrowserRouter>
       </div>
