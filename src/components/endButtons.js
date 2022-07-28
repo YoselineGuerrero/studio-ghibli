@@ -34,24 +34,24 @@ export default function EndButtonRedirect(items) {
   }
 
   return (
-    <div>
+    <>
       {givenArray[0].id !==1 ?
-        <>
+        <div className='grid-end-container'>
           {givenArray.map((item) =>(
-            <span key={item.id}>
+            <div className='grid-item' key={item.id}>
               <a href={linkName+ item.id}>
                 {filmBool
-                  ? <button>{item.title}</button>
-                  : <button>{item.name}</button>
+                  ? <button className='buttons font-med'>{item.title}</button>
+                  : <button className='buttons font-med'>{item.name}</button>
                 }
               </a>
-            </span>
+            </div>
           ))}
-        </> 
+        </div> 
         : <>
-        <span>Currently there isn't any {titleName} to be shown.</span>
+        <span className='center-layout'>Currently there isn't any {titleName} to be shown.</span>
         </>
       }
-    </div>
+    </>
   );
 }

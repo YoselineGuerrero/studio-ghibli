@@ -7,7 +7,7 @@ export default function Navbar(backButton) {
     <nav style={{display: 'flex', margin: '0 5px'}}>
       {backButton.back
         ? ''
-        : <button onClick={() => navigate(-1)}>Back</button>
+        : <button id='back-button' onClick={() => navigate(-1)}>Back</button>
       }
       <span className='center font-large' style={{margin: 'auto'}}>Studio Ghibli</span>
     </nav>

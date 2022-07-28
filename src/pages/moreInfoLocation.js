@@ -87,10 +87,10 @@ export default function MoreInfoLocation() {
           ))}
         </div>
 
-        <div className='center' style={tabActive === 'Films' ? {} : {display: 'none'}}>
+        <div style={tabActive === 'Films' ? {} : {display: 'none'}}>
           <EndButtonRedirect films={films}/>
         </div>
-        <div className='center' style={tabActive === 'People' ? {} : {display: 'none'}}>
+        <div style={tabActive === 'People' ? {} : {display: 'none'}}>
           <EndButtonRedirect people={people}/>
         </div>
       </div>

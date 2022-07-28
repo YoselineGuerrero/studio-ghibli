@@ -122,16 +122,16 @@ export default function MoreInfoFilm() {
           ))}
         </div>
 
-        <div className='center' style={tabActive === 'People' ? {} : {display: 'none'}}>
+        <div style={tabActive === 'People' ? {} : {display: 'none'}}>
           <EndButtonRedirect people={people}/>
         </div>
-        <div className='center' style={tabActive === 'Locations' ? {} : {display: 'none'}}>
+        <div style={tabActive === 'Locations' ? {} : {display: 'none'}}>
           <EndButtonRedirect location={location}/>
         </div>
-        <div className='center' style={tabActive === 'Species' ? {} : {display: 'none'}}>
+        <div style={tabActive === 'Species' ? {} : {display: 'none'}}>
           <EndButtonRedirect species={species} />
         </div>
-        <div className='center' style={tabActive === 'Vehicle' ? {} : {display: 'none'}}>
+        <div style={tabActive === 'Vehicle' ? {} : {display: 'none'}}>
           <EndButtonRedirect vehicles={vehicles}/>
         </div>
       </div>

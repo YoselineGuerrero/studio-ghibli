@@ -30,6 +30,11 @@
   padding: 10px;
 }
 
+.grid-end-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
 .center-error{
   display: flex;
   justify-content: center;
@@ -130,6 +135,12 @@
   background-color: inherit;
 }
 
+#back-button {
+  border: none;
+  cursor: pointer;
+  background-color: inherit !important;
+}
+
 .tab-buttons-active {
   color: #bf4747;
   border-bottom: 1px solid #bf4747 !important;
@@ -138,9 +149,15 @@
 #tab-div {
   display: flex;
   justify-content: space-around;
+  padding-top: 20px;
 }
 
 @media only screen and (max-width: 520px) {
+  .grid-end-container {
+    display: grid;
+    grid-template-columns: auto !important;
+  }
+  
   .font-xsmall{
     font-size: .8em !important;
   }
@@ -165,6 +182,11 @@
   .grid-container {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
+  .grid-end-container {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  
   .font-xsmall{
     font-size: .6em;
   }
@@ -190,6 +212,11 @@
   .grid-container-film {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
+  .grid-end-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+  
   .font-xsmall{
     font-size: .7em;
   }
@@ -214,6 +241,10 @@
   .grid-container {
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   }
+  .grid-end-container {
+    grid-template-columns: auto auto auto auto auto;
+  }
+  
   .font-xsmall{
     font-size: 1.1em;
   }
