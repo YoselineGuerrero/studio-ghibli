@@ -42,7 +42,7 @@ export default function MoreInfoFilm() {
       let changedData1 = [];
       let changedData2 = [];
       let changedData3 = [];
-      if(event.people[0] !== 'https://ghibliapi.herokuapp.com/people/'){
+      if(event.people[0] !== 'https://ghibliapi.vercel.app/people/'){
         Promise.all(event.people.map((person) => {
           return getExtra(person).then((data) => {
             changedData.push(data);
@@ -51,7 +51,7 @@ export default function MoreInfoFilm() {
           setPeople(changedData);
         });
       }
-      if(event.locations[0] !== 'https://ghibliapi.herokuapp.com/locations/'){
+      if(event.locations[0] !== 'https://ghibliapi.vercel.app/locations/'){
         Promise.all(event.locations.map((location) => {
           return getExtra(location).then((data) => {
             changedData1.push(data);
@@ -60,7 +60,7 @@ export default function MoreInfoFilm() {
           setLocation(changedData1);
         });
       }
-      if(event.species[0] !== 'https://ghibliapi.herokuapp.com/species/'){
+      if(event.species[0] !== 'https://ghibliapi.vercel.app/species/'){
         Promise.all(event.species.map((specie) => {
           return getExtra(specie).then((data) => {
             changedData2.push(data);
@@ -69,7 +69,7 @@ export default function MoreInfoFilm() {
           setSpecies(changedData2);
         });
       }
-      if(event.vehicles[0] !== 'https://ghibliapi.herokuapp.com/vehicles/'){
+      if(event.vehicles[0] !== 'https://ghibliapi.vercel.app/vehicles/'){
         Promise.all(event.vehicles.map((vehicle) => {
           return getExtra(vehicle).then((data) => {
             changedData3.push(data);

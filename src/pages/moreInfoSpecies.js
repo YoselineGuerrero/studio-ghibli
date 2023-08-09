@@ -31,7 +31,7 @@ export default function MoreInfoSpecies() {
       setSpecies(event);
       let changedData1 = [];
       let changedData2 = [];
-      if(event.people[0] !== 'https://ghibliapi.herokuapp.com/people/'){
+      if(event.people[0] !== 'https://ghibliapi.vercel.app/people/'){
         Promise.all(event.people.map((person) => {
           return getExtra(person).then((data) => {
             changedData1.push(data);
@@ -40,7 +40,7 @@ export default function MoreInfoSpecies() {
           setPeople(changedData1);
         });
       }
-      if(event.films[0] !== 'https://ghibliapi.herokuapp.com/films/'){
+      if(event.films[0] !== 'https://ghibliapi.vercel.app/films/'){
         Promise.all(event.films.map((film) => {
           return getExtra(film).then((data) => {
             changedData2.push(data);
