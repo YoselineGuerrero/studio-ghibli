@@ -15,7 +15,7 @@ export default function MoreInfoPeople() {
     getPeopleID(id).then((event) =>{
       setPeople(event);
       let changedData1 = [];
-      if(event.films[0] !== 'https://ghibliapi.herokuapp.com/films/'){
+      if(event.films[0] !== 'https://ghibliapi.vercel.app/films/'){
         Promise.all(event.films.map((film) => {
           return getExtra(film).then((data) => {
             changedData1.push(data);

@@ -17,7 +17,7 @@ export default function MoreInfoVehicles() {
       let changedData2 = [];
         getExtra(event.pilot).then((event) =>{
             setPeople(event);})
-      if(event.films[0] !== 'https://ghibliapi.herokuapp.com/films/'){
+      if(event.films[0] !== 'https://ghibliapi.vercel.app/films/'){
         Promise.all(event.films.map((film) => {
           return getExtra(film).then((data) => {
             changedData2.push(data);

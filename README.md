@@ -10,4 +10,4 @@ The API that this site uses does need more contributions, just adding any Studio
 
 Using the API from https://github.com/janaipakos/ghibliapi
 
-Also found here https://ghibliapi.herokuapp.com/
+Also found here https://ghibliapi.vercel.app/

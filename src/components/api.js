@@ -1,4 +1,4 @@
-const baseURL = 'https://ghibliapi.herokuapp.com/';
+const baseURL = 'https://ghibliapi.vercel.app/';
 
 export const getFilms = async () => {
   const res = await fetch(baseURL+'films');
